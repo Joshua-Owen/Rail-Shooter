@@ -20,8 +20,8 @@
                     "id": "3d7f95e8-9cc6-4bbf-b8de-6b285aac9539",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Press(behavior=2)",
-                    "initialStateCheck": false
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -84,7 +84,7 @@
                     "name": "",
                     "id": "614cedf1-dd9d-4d27-b526-62db8c20066d",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "",
+                    "interactions": "Press(pressPoint=0.001,behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "Fire",
