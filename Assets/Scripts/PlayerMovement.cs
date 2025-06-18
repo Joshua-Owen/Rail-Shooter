@@ -14,16 +14,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float controlPitchFactor = 20f;
     [SerializeField] float rotationSpeed = 10f;
 
+    [SerializeField] float movementLock = 5f;
+
     Vector2 movement;
 
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        //ProcessTranslation();
+        Invoke("ProcessTranslation", 5f);
+        Invoke("ProcessRotation", 5f);
     }
 
     void ProcessTranslation()
     {
+
         float xOffset = movement.x * controlSpeed * Time.deltaTime;
         float rawXPos = transform.localPosition.x + xOffset;
         float clampedXPos = Mathf.Clamp(rawXPos, -xClampRange, xClampRange);
